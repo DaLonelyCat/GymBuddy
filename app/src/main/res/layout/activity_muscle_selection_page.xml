@@ -6,16 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#EFECE3"
     tools:context=".MuscleSelectionPage">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select muscles
-        to train"
-        android:textSize="50sp"
+        android:text="Select muscles to train"
+        android:textColor="@color/black"
+        android:textSize="40sp"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="65dp"/>
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -27,76 +28,75 @@
         android:useDefaultMargins="true">
 
         <LinearLayout
-            android:id="@+id/advMLayout"
+            android:id="@+id/shoulderLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/advanceMachine"
+                android:src="@drawable/shoulder"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
-                android:onClick="AmSelect"/>
+                android:onClick="shoulderSelect"
+                android:contentDescription="shoulderpicture"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
-                android:text="Advanced Machine"
+                android:text="Shoulders"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/bscMachineLayout"
+            android:id="@+id/armLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/bscMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/basicMachine"
+                android:src="@drawable/arm"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
-                android:onClick="bscMchnSelect"/>
+                android:onClick="armSelect"
+                android:contentDescription="armpicture"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
-                android:text="Basic Machine"
+                android:text="Arm"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/dumbbellLayout"
+            android:id="@+id/chestLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/dumbbell"
+                android:src="@drawable/chest"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
-                android:onClick="AmSelect"/>
+                android:contentDescription="chestpicture"
+                android:onClick="chestSelect"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dumbbell"
+                android:text="Chest"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"/>
@@ -104,24 +104,24 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/barbellLayout"
+            android:id="@+id/backLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/barbell"
+                android:src="@drawable/back"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
-                android:onClick="AmSelect"/>
+                android:onClick="backSelect"
+                android:contentDescription="backpicture"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Barbell"
+                android:text="Back"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"/>
@@ -129,24 +129,24 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/benchLayout"
+            android:id="@+id/legLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/bench"
+                android:src="@drawable/leg"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
-                android:onClick="AmSelect"/>
+                android:onClick="legSelect"
+                android:contentDescription="legpicture"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bench"
+                android:text="Leg"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"/>
@@ -161,17 +161,17 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/bodyweight"
+                android:src="@drawable/core"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
-                android:onClick="AmSelect"/>
+                android:onClick="coreSelect"
+                android:contentDescription="corepicture"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bodyweight"
+                android:text="Core"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
                 android:textStyle="bold"/>
@@ -179,5 +179,32 @@
         </LinearLayout>
 
     </GridLayout>
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:text="Back"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="Continue"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
 
 </LinearLayout>

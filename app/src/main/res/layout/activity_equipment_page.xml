@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#EFECE3"
     tools:context=".EquipmentPage">
 
     <TextView
@@ -13,9 +14,11 @@
         android:layout_height="wrap_content"
         android:text="Select available equipment"
         android:textColor="@color/black"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="50dp"/>
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -37,7 +40,7 @@
                 android:id="@+id/advMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/advanceMachine"
+                android:src="@drawable/advnmachine"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
                 android:onClick="AmSelect"/>
@@ -63,7 +66,7 @@
                 android:id="@+id/bscMachine"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/basicMachine"
+                android:src="@drawable/bscmachine"
                 android:background="@drawable/backgroundbox"
                 android:padding="10dp"
                 android:onClick="bscMchnSelect"/>
@@ -86,7 +89,7 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
+                android:id="@+id/dumbbellimg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/dumbbell"
@@ -111,7 +114,7 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
+                android:id="@+id/barbellimg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/barbell"
@@ -136,7 +139,7 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
+                android:id="@+id/benchimg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/bench"
@@ -161,7 +164,7 @@
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/advMachine"
+                android:id="@+id/bodyWeighimg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@drawable/bodyweight"
@@ -178,6 +181,36 @@
 
         </LinearLayout>
 
+
     </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnBack1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:text="Back"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnNext1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:text="Continue"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
