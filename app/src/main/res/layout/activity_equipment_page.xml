@@ -193,22 +193,23 @@
         android:padding="5dp">
 
         <Button
-            android:id="@+id/btnBack1"
+            android:id="@+id/btnBack"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginRight="5dp"
             android:text="Back"
-            android:backgroundTint="#FF6C0C"
+            android:backgroundTint="#DC0E0E"
             android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/btnNext1"
+            android:id="@+id/btnNext"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:text="Continue"
+            android:backgroundTint="#62109F"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
