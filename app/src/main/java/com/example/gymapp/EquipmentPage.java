@@ -33,4 +33,7 @@ public class EquipmentPage extends AppCompatActivity {
             }
         });
     }
+
+    public void Dumbell(View view) {
+    }
 }
