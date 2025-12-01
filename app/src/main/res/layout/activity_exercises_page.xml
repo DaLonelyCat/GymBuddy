@@ -2,14 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212">
+    android:background="#EFECE3">
 
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="#000000"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -19,8 +18,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginRight="5dp"
-            android:background="#333333"
             android:text="Back"
+            android:backgroundTint="#FF6C0C"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -29,7 +28,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
-            android:background="#007AFF"
             android:text="Continue"
             android:textColor="#FFFFFF" />
 
@@ -49,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your Plan"
-                android:textColor="#FFFFFF"
+                android:textColor="#121212"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -59,7 +57,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:text="Here are the exercises we found for you based on what you picked."
-                android:textColor="#AAAAAA"
+                android:textColor="#121212"
                 android:textSize="14sp" />
 
             <androidx.recyclerview.widget.RecyclerView
