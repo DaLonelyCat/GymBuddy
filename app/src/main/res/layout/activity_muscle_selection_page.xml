@@ -16,13 +16,13 @@
         android:textColor="@color/black"
         android:textSize="40sp"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="65dp"/>
+        android:layout_marginBottom="1dp"/>
 
     <GridLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alignmentMode="alignBounds"
+        android:layout_height="623dp"
         android:layout_gravity="center_horizontal"
+        android:alignmentMode="alignBounds"
         android:columnCount="2"
         android:rowCount="3"
         android:useDefaultMargins="true">
@@ -34,21 +34,22 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/shoulder"
                 android:background="@drawable/backgroundbox"
+                android:contentDescription="shoulderpicture"
                 android:padding="10dp"
-                android:onClick="shoulderSelect"
-                android:contentDescription="shoulderpicture"/>
+                android:src="@drawable/shoulder" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cbShoulder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:text="Shoulders"
+                android:text="Shoulder"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -59,19 +60,20 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/arm"
                 android:background="@drawable/backgroundbox"
+                android:contentDescription="armpicture"
                 android:padding="10dp"
-                android:onClick="armSelect"
-                android:contentDescription="armpicture"/>
+                android:src="@drawable/arm" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cbArm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Arm"
                 android:textStyle="bold" />
@@ -85,21 +87,23 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/chest"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
                 android:contentDescription="chestpicture"
-                android:onClick="chestSelect"/>
-            <TextView
+                android:padding="10dp"
+                android:src="@drawable/chest" />
+
+            <CheckBox
+                android:id="@+id/cbChest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chest"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Chest"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -110,21 +114,23 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/back"
                 android:background="@drawable/backgroundbox"
+                android:contentDescription="backpicture"
                 android:padding="10dp"
-                android:onClick="backSelect"
-                android:contentDescription="backpicture"/>
-            <TextView
+                android:src="@drawable/back" />
+
+            <CheckBox
+                android:id="@+id/cbBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Back"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Back"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -135,21 +141,23 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/leg"
                 android:background="@drawable/backgroundbox"
+                android:contentDescription="legpicture"
                 android:padding="10dp"
-                android:onClick="legSelect"
-                android:contentDescription="legpicture"/>
-            <TextView
+                android:src="@drawable/leg" />
+
+            <CheckBox
+                android:id="@+id/cbleg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Leg"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Leg"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -160,21 +168,23 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/core"
                 android:background="@drawable/backgroundbox"
+                android:contentDescription="corepicture"
                 android:padding="10dp"
-                android:onClick="coreSelect"
-                android:contentDescription="corepicture"/>
-            <TextView
+                android:src="@drawable/core" />
+
+            <CheckBox
+                android:id="@+id/cbBodyWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Core"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Body Weight"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

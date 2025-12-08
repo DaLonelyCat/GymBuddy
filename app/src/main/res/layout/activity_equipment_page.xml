@@ -68,8 +68,7 @@
                 android:layout_height="150dp"
                 android:src="@drawable/bscmachine"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="bscMchnSelect"/>
+                android:padding="10dp"/>
 
             <CheckBox
                 android:id="@+id/cbBasicMachine"
@@ -95,8 +94,7 @@
                 android:layout_height="150dp"
                 android:src="@drawable/dumbbell"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="Dumbell"/>
+                android:padding="10dp"/>
             <CheckBox
                 android:id="@+id/cbDumbell"
                 android:layout_width="wrap_content"
