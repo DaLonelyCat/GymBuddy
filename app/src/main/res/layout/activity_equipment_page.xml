@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Select available equipment"
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:gravity="center_horizontal"
         android:fontFamily="@font/roboto"
         android:textStyle="bold"
@@ -42,15 +42,16 @@
                 android:layout_height="150dp"
                 android:src="@drawable/advnmachine"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="AmSelect"/>
+                android:padding="10dp"/>
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cbAdvancedMachine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Advanced Machine"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -68,15 +69,16 @@
                 android:layout_height="150dp"
                 android:src="@drawable/bscmachine"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="bscMchnSelect"/>
+                android:padding="10dp"/>
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cbBasicMachine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Basic Machine"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -94,15 +96,16 @@
                 android:layout_height="150dp"
                 android:src="@drawable/dumbbell"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="Dumbell"/>
-            <TextView
+                android:padding="10dp"/>
+            <CheckBox
+                android:id="@+id/cbDumbell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dumbbell"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Dumbell"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -119,15 +122,16 @@
                 android:layout_height="150dp"
                 android:src="@drawable/barbell"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="AmSelect"/>
-            <TextView
+                android:padding="10dp"/>
+            <CheckBox
+                android:id="@+id/cbBarbell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Barbell"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Barbell"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -144,15 +148,16 @@
                 android:layout_height="150dp"
                 android:src="@drawable/bench"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="AmSelect"/>
-            <TextView
+                android:padding="10dp"/>
+            <CheckBox
+                android:id="@+id/cbBench"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bench"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Bench"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -169,15 +174,16 @@
                 android:layout_height="150dp"
                 android:src="@drawable/bodyweight"
                 android:background="@drawable/backgroundbox"
-                android:padding="10dp"
-                android:onClick="AmSelect"/>
-            <TextView
+                android:padding="10dp"/>
+            <CheckBox
+                android:id="@+id/cbBodyWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bodyweight"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:textStyle="bold"/>
+                android:text="Body Weight"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
