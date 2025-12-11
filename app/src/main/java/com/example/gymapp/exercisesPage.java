@@ -26,6 +26,9 @@ public class exercisesPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
+        ArrayList<String> equipmentList = getIntent().getStringArrayListExtra("DATA_EQUIPMENT");
+        ArrayList<String> muscleList = getIntent().getStringArrayListExtra("DATA_MUSCLE");
+
         setContentView(R.layout.activity_exercises_page);
 
         View mainView = findViewById(R.id.main);
@@ -37,7 +40,7 @@ public class exercisesPage extends AppCompatActivity {
             });
         }
 
-        ArrayList<String> equipmentList = getIntent().getStringArrayListExtra("SELECTED_EQUIPMENT");
+
 
         if (equipmentList != null && !equipmentList.isEmpty()) {
             String message = "You selected: " + equipmentList.toString();
