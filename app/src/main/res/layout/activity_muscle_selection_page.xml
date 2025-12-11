@@ -50,6 +50,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Shoulder"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -76,6 +77,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Arm"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -103,6 +105,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Chest"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -130,6 +133,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Back"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -157,6 +161,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Leg"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -184,6 +189,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Body Weight"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -204,6 +210,7 @@
             android:layout_weight="1"
             android:layout_marginRight="5dp"
             android:text="Back"
+            android:backgroundTint="#DC0E0E"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -213,6 +220,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:text="Continue"
+            android:backgroundTint="#62109F"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

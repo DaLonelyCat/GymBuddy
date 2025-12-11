@@ -51,6 +51,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Advanced Machine"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -77,6 +78,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Basic Machine"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -102,6 +104,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Dumbell"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -127,6 +130,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Barbell"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -152,6 +156,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Bench"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -177,6 +182,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Body Weight"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -199,6 +205,7 @@
             android:layout_weight="1"
             android:layout_marginRight="5dp"
             android:text="Back"
+            android:backgroundTint="#DC0E0E"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -208,6 +215,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:text="Continue"
+            android:backgroundTint="#62109F"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

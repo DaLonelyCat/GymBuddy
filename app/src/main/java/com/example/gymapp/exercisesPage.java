@@ -3,25 +3,19 @@ package com.example.gymapp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView; // Imported TextView
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.ArrayList;
 
-import java.util.ArrayList; // Import ArrayList
-/*
-The plan is to set each Equipment and Muscle with their own Tag,
-We give a few preloaded exercises and give them their tags,
-when the user chooses an equipment & muscle,
-The app showcase all the exercises containing the selected tags.
-*/
 public class exercisesPage extends AppCompatActivity {
 
-    @Override
+    private RecyclerView recyclerView;
+    private RecyclerviewAdapter adapter;
+    private ArrayList<Exercise> exerciseList;
+
+    @Override //TEMPORARY DATA TO TEST
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -31,43 +25,76 @@ public class exercisesPage extends AppCompatActivity {
 
         setContentView(R.layout.activity_exercises_page);
 
-        View mainView = findViewById(R.id.main);
-        if (mainView != null) {
-            ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, insets) -> {
-                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-                return insets;
-            });
-        }
+        recyclerView = findViewById(R.id.exercisesList);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        exerciseList = new ArrayList<>();
+
+        exerciseList.add(new Exercise(
+                1,
+                "Barbell Decline Shrug",
+                "Description here",
+                R.drawable.shoulder,
+                "Step 1...",
+                new ArrayList<>(),
+                new ArrayList<>(),
+                3,
+                12
+        ));
+
+        exerciseList.add(new Exercise(
+                2,
+                "Front Plate Raise",
+                "Description here",
+                R.drawable.chest,
+                "Step 1...",
+                new ArrayList<>(),
+                new ArrayList<>(),
+                3,
+                10
+        ));
 
 
+        exerciseList.add(new Exercise(
+                3,
+                "Dumbbell Press",
+                "Description here",
+                R.drawable.arm,
+                "Step 1...",
+                new ArrayList<>(),
+                new ArrayList<>(),
+                4,
+                8
+        ));
 
-        if (equipmentList != null && !equipmentList.isEmpty()) {
-            String message = "You selected: " + equipmentList.toString();
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        exerciseList.add(new Exercise(
+                4,
+                "Bench Press",
+                "Description here",
+                R.drawable.bench,
+                "Step 1...",
+                new ArrayList<>(),
+                new ArrayList<>(),
+                5,
+                5
+        ));
 
-        } else {
-            Toast.makeText(this, "No equipment selected!", Toast.LENGTH_SHORT).show();
-        }
+        adapter = new RecyclerviewAdapter(exerciseList);
+        recyclerView.setAdapter(adapter);
 
         Button btnBack = findViewById(R.id.btnBack);
-        if (btnBack != null) {
-            btnBack.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
-        }
+        btnBack.setOnClickListener(v -> finish());
 
         Button btnNext = findViewById(R.id.btnNext);
-        if (btnNext != null) {
-            btnNext.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(exercisesPage.this, "Starting Workout...", Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
+        btnNext.setOnClickListener(v -> {
+            StringBuilder summary = new StringBuilder("Workout Plan:\n");
+            for (Exercise ex : exerciseList) {
+                summary.append(ex.getName())
+                        .append(": ").append(ex.getSets()).append(" x ").append(ex.getReps())
+                        .append("\n");
+            }
+            Toast.makeText(exercisesPage.this, summary.toString(), Toast.LENGTH_LONG).show();
+        });
     }
 }

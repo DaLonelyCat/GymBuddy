@@ -16,7 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class MuscleSelectionPage extends AppCompatActivity {
-    ArrayList<String> receivedEquipments;
     LinearLayout Shoulderlayout, ArmLayout, ChestLayout, BackLayout, LegLayout, BodyWeightLayout;
     CheckBox cb_shoulder, cb_arm, cb_chest, cb_back, cb_leg, cb_bodyweight;
 
@@ -24,8 +23,6 @@ public class MuscleSelectionPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muscle_selection_page);
-
-        receivedEquipments = getIntent().getStringArrayListExtra("DATA_EQUIPMENT");
 
         Shoulderlayout = findViewById(R.id.shoulderLayout);
         ArmLayout = findViewById(R.id.armLayout);
