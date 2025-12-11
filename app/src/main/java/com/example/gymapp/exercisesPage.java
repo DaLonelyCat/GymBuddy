@@ -18,6 +18,11 @@ public class exercisesPage extends AppCompatActivity {
     @Override //TEMPORARY DATA TO TEST
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+
+        ArrayList<String> equipmentList = getIntent().getStringArrayListExtra("DATA_EQUIPMENT");
+        ArrayList<String> muscleList = getIntent().getStringArrayListExtra("DATA_MUSCLE");
+
         setContentView(R.layout.activity_exercises_page);
 
         recyclerView = findViewById(R.id.exercisesList);
@@ -49,6 +54,7 @@ public class exercisesPage extends AppCompatActivity {
                 3,
                 10
         ));
+
 
         exerciseList.add(new Exercise(
                 3,

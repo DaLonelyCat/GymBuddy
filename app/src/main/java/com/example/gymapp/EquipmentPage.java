@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast; // Import Toast
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class EquipmentPage extends AppCompatActivity {
 
     LinearLayout AdvMlayout, BscMachineLayout, DumbellLayout, BarbellLayout, BenchLayout, BodyWeightLayout;
@@ -46,7 +48,30 @@ public class EquipmentPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                ArrayList<String> selectedEquipments = new ArrayList<>();
+                // Cek status checkbox satu per satu
+                // String yang ditambahkan HARUS SAMA dengan data di ExerciseList.java Anda nanti
+                if (cb_advanceMachine.isChecked()) {
+                    selectedEquipments.add("Advanced Machine");
+                }
+                if (cb_basicMachine.isChecked()) {
+                    selectedEquipments.add("Basic Machine");
+                }
+                if (cb_dumbell.isChecked()) {
+                    selectedEquipments.add("Dumbbell");
+                }
+                if (cb_barbell.isChecked()) {
+                    selectedEquipments.add("Barbell");
+                }
+                if (cb_bench.isChecked()) {
+                    selectedEquipments.add("Bench");
+                }
+                if (cb_bodyweight.isChecked()) {
+                    selectedEquipments.add("Bodyweight");
+                }
+
                 Intent i = new Intent(EquipmentPage.this, MuscleSelectionPage.class);
+                i.putStringArrayListExtra("DATA_EQUIPMENT", selectedEquipments);
                 startActivity(i);
             }
         });

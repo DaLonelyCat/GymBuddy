@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MuscleSelectionPage extends AppCompatActivity {
     LinearLayout Shoulderlayout, ArmLayout, ChestLayout, BackLayout, LegLayout, BodyWeightLayout;
     CheckBox cb_shoulder, cb_arm, cb_chest, cb_back, cb_leg, cb_bodyweight;
@@ -49,8 +51,21 @@ public class MuscleSelectionPage extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ArrayList<String> selectedMuscles = new ArrayList<>();
+                if (cb_shoulder.isChecked()) selectedMuscles.add("Shoulder");
+                if (cb_arm.isChecked()) selectedMuscles.add("Arm");
+                if (cb_chest.isChecked()) selectedMuscles.add("Chest");
+                if (cb_back.isChecked()) selectedMuscles.add("Back");
+                if (cb_leg.isChecked()) selectedMuscles.add("Leg");
+                if (cb_bodyweight.isChecked()) selectedMuscles.add("Body Weight");
+
 
                 Intent i = new Intent(MuscleSelectionPage.this, exercisesPage.class);
+                // Oper lagi data equipment yang tadi diterima
+                i.putStringArrayListExtra("DATA_EQUIPMENT", receivedEquipments);
+
+                // Tambahkan data muscle yang baru dipilih
+                i.putStringArrayListExtra("DATA_MUSCLE", selectedMuscles);
                 startActivity(i);
             }
         });
