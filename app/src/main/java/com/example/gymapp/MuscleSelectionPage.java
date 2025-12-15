@@ -52,6 +52,7 @@ public class MuscleSelectionPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ArrayList<String> selectedMuscles = new ArrayList<>();
+                ArrayList<String> receivedEquipments = new ArrayList<>();
                 if (cb_shoulder.isChecked()) selectedMuscles.add("Shoulder");
                 if (cb_arm.isChecked()) selectedMuscles.add("Arm");
                 if (cb_chest.isChecked()) selectedMuscles.add("Chest");
