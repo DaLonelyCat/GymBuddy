@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490506169372",
+    "project_id": "pushnotificationandroid-6177c",
+    "storage_bucket": "pushnotificationandroid-6177c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490506169372:android:32c47e69e25f7baf8443d9",
+        "android_client_info": {
+          "package_name": "com.example.gymapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG1sr1DlrMZlSBALdFlKux5OyFicZ0ZTQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
