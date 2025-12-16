@@ -14,7 +14,7 @@
         android:padding="5dp">
 
         <Button
-            android:id="@+id/btnBack"
+            android:id="@+id/btnBack2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -24,7 +24,7 @@
             android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/btnNext"
+            android:id="@+id/btnNext2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -48,6 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingTop="50dp"
                 android:text="Your Plan"
                 android:textColor="#121212"
                 android:textSize="28sp"

@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 101) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Log.d("Permission", "Notification Permission Allowed");
+                Log.d("Permission", "Izin notifikasi diberikan");
             } else {
-                Log.d("Permission", "Notification Permission Denied");
+                Log.d("Permission", "Izin notifikasi ditolak");
             }
         }
 

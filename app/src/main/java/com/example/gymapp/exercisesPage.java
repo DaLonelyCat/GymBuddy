@@ -1,5 +1,6 @@
 package com.example.gymapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,15 +18,14 @@ public class exercisesPage extends AppCompatActivity {
     private RecyclerviewAdapter adapter;
     private ArrayList<Exercise> exerciseList;
 
-    @Override //TEMPORARY DATA TO TEST
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_exercises_page);
 
         ArrayList<String> equipmentList = getIntent().getStringArrayListExtra("DATA_EQUIPMENT");
         ArrayList<String> muscleList = getIntent().getStringArrayListExtra("DATA_MUSCLE");
-
-        setContentView(R.layout.activity_exercises_page);
 
         recyclerView = findViewById(R.id.exercisesList);
         recyclerView.setHasFixedSize(true);
@@ -33,70 +33,29 @@ public class exercisesPage extends AppCompatActivity {
 
         exerciseList = new ArrayList<>();
 
-        exerciseList.add(new Exercise(
-                1,
-                "Barbell Decline Shrug",
-                "Description here",
-                R.drawable.shoulder,
-                "Step 1...",
-                new ArrayList<>(),
-                new ArrayList<>(),
-                3,
-                12
-        ));
-
-        exerciseList.add(new Exercise(
-                2,
-                "Front Plate Raise",
-                "Description here",
-                R.drawable.chest,
-                "Step 1...",
-                new ArrayList<>(),
-                new ArrayList<>(),
-                3,
-                10
-        ));
-
-
-        exerciseList.add(new Exercise(
-                3,
-                "Dumbbell Press",
-                "Description here",
-                R.drawable.arm,
-                "Step 1...",
-                new ArrayList<>(),
-                new ArrayList<>(),
-                4,
-                8
-        ));
-
-        exerciseList.add(new Exercise(
-                4,
-                "Bench Press",
-                "Description here",
-                R.drawable.bench,
-                "Step 1...",
-                new ArrayList<>(),
-                new ArrayList<>(),
-                5,
-                5
-        ));
+        // TODO: LOGIC TO POPULATE EXERCISELIST GOES HERE
 
         adapter = new RecyclerviewAdapter(exerciseList);
         recyclerView.setAdapter(adapter);
 
-        Button btnBack = findViewById(R.id.btnBack);
+        Button btnBack = findViewById(R.id.btnBack2);
         btnBack.setOnClickListener(v -> finish());
 
-        Button btnNext = findViewById(R.id.btnNext);
+        Button btnNext = findViewById(R.id.btnNext2);
         btnNext.setOnClickListener(v -> {
-            StringBuilder summary = new StringBuilder("Workout Plan:\n");
-            for (Exercise ex : exerciseList) {
-                summary.append(ex.getName())
-                        .append(": ").append(ex.getSets()).append(" x ").append(ex.getReps())
-                        .append("\n");
+            if (exerciseList.isEmpty()) {
+                Toast.makeText(exercisesPage.this, "No exercises selected!", Toast.LENGTH_SHORT).show();
+                return;
             }
-            Toast.makeText(exercisesPage.this, summary.toString(), Toast.LENGTH_LONG).show();
+
+            Intent intent = new Intent(exercisesPage.this, startExercise.class);
+
+            Exercise firstExercise = exerciseList.get(0);
+            intent.putExtra("EXERCISE_NAME", firstExercise.getName());
+            intent.putExtra("EXERCISE_IMAGE", firstExercise.getImageResId());
+            intent.putExtra("EXERCISE_DESC", firstExercise.getDescription());
+
+            startActivity(intent);
         });
     }
 }
