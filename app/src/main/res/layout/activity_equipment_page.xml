@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#EFECE3"
+    android:background="@drawable/deepspace"
     tools:context=".EquipmentPage">
 
 <!--Top Title Section-->
@@ -22,7 +22,7 @@
             android:gravity="center_horizontal"
             android:paddingTop="50dp"
             android:text="Select Equipment"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -41,10 +41,10 @@
             android:id="@+id/btnBack1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F25912"
             android:text="Back"
-            android:backgroundTint="#DC0E0E"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -54,7 +54,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:text="Continue"
-            android:backgroundTint="#62109F"
+            android:backgroundTint="#5C3E94"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
@@ -92,7 +92,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Advanced Machine"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -120,7 +120,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Basic Machine"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -147,7 +147,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Dumbell"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -174,7 +174,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Barbell"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -201,7 +201,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Bench"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -228,7 +228,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Body Weight"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>

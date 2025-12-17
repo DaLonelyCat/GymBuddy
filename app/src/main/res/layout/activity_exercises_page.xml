@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
-    android:background="#EFECE3">
+    android:background="@drawable/deepspace">
 
     <LinearLayout
         android:id="@+id/bottomBar"
@@ -17,10 +17,10 @@
             android:id="@+id/btnBack2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F25912"
             android:text="Back"
-            android:backgroundTint="#DC0E0E"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -30,7 +30,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:text="Continue"
-            android:backgroundTint="#62109F"
+            android:backgroundTint="#5C3E94"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="50dp"
                 android:text="Your Plan"
-                android:textColor="#121212"
+                android:textColor="@color/white"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:text="Here are the exercises we found for you based on what you picked."
-                android:textColor="#121212"
+                android:textColor="@color/white"
                 android:textSize="14sp" />
 
             <androidx.recyclerview.widget.RecyclerView

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#EFECE3"
+    android:background="@drawable/deepspace"
     tools:context=".MuscleSelectionPage">
 
     <!--Top Title Section-->
@@ -22,7 +22,7 @@
             android:gravity="center_horizontal"
             android:paddingTop="50dp"
             android:text="Select Muscle"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -41,10 +41,10 @@
             android:id="@+id/btnBack"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F25912"
             android:text="Back"
-            android:backgroundTint="#DC0E0E"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -54,7 +54,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="5dp"
             android:text="Continue"
-            android:backgroundTint="#62109F"
+            android:backgroundTint="#5C3E94"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
@@ -94,7 +94,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Shoulder"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -123,7 +123,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Arm"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -153,7 +153,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Chest"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -183,7 +183,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Back"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -213,7 +213,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Leg"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -243,7 +243,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
                 android:text="Body Weight"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
