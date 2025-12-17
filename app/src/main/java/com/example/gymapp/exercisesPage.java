@@ -31,9 +31,20 @@ public class exercisesPage extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        exerciseList = new ArrayList<>();
+        if (equipmentList == null) equipmentList = new ArrayList<>();
+        if (muscleList == null) muscleList = new ArrayList<>();
+
+
+
+
 
         // TODO: LOGIC TO POPULATE EXERCISELIST GOES HERE
+        ArrayList<Exercise> allData = ExerciseList.getAllExercises();
+        ArrayList<Exercise> exerciseList = ExerciseFilter.filterExercises(allData, equipmentList, muscleList);
+
+        System.out.println("DEBUG ALAT USER: " + equipmentList.toString());
+        System.out.println("DEBUG OTOT USER: " + muscleList.toString());
+        System.out.println("DEBUG TOTAL DATA MASTER: " + allData.size());
 
         adapter = new RecyclerviewAdapter(exerciseList);
         recyclerView.setAdapter(adapter);
