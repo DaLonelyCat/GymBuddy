@@ -20,10 +20,10 @@
             android:id="@+id/btnPrev"
             android:layout_width="90dp"
             android:layout_height="95dp"
-            android:backgroundTint="#628141"
-            android:text="Previous"
+            android:backgroundTint="#F25912"
+            android:text="Back"
             android:textColor="#FFFFFF"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/btnStart"
@@ -72,6 +72,7 @@
             android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="250dp"
+            android:padding="10dp"
             android:adjustViewBounds="true"
             android:contentDescription="Exercise Image"
             android:src="@drawable/videoimg" />

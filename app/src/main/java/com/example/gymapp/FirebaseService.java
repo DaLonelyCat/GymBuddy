@@ -8,12 +8,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
-
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -29,14 +27,11 @@ public class FirebaseService extends FirebaseMessagingService{
 
         showNotification(title,desc);
     }
-
-
     @Override
     public void onNewToken(@NonNull String token) {
         super.onNewToken(token);
         Log.d("FCM Token: ", token);
     }
-
     void showNotification(String title, String desc){
         String channelId = "channel_id";
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -59,7 +54,6 @@ public class FirebaseService extends FirebaseMessagingService{
                 .setContentText(desc)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntent);
-
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
 

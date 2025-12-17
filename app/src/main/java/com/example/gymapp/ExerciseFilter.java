@@ -11,7 +11,6 @@ public class ExerciseFilter {
         ArrayList<Exercise> filteredList = new ArrayList<>();
 
         for (Exercise exercise : allExercises) {
-
             // Kita asumsikan user harus punya SEMUA alat yang diminta exercise.
             // Logika: exercise.needed C user.owned
 
@@ -31,15 +30,11 @@ public class ExerciseFilter {
             }
             // Catatan: Jika requiredTools kosong (misal bodyweight murni tanpa tag),
             // dianggap true (bisa dilakukan).
-
-
             // Kita asumsikan exercise cukup kena SALAH SATU otot yang dipilih user.
 
             boolean isMuscleTargeted = false;
-
             // Ambil target otot dari exercise
             List<String> targetMuscles = exercise.getMuscleGroups();
-
             if (targetMuscles != null) {
                 for (String muscle : targetMuscles) {
                     // Jika salah satu target otot exercise ADA di pilihan user
@@ -50,13 +45,11 @@ public class ExerciseFilter {
                 }
             }
 
-
             // Masukkan ke list jika Alat Lengkap DAN Otot Sesuai
             if (isEquipmentComplete && isMuscleTargeted) {
                 filteredList.add(exercise);
             }
         }
-
         return filteredList;
     }
 }

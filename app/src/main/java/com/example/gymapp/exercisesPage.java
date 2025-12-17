@@ -34,11 +34,6 @@ public class exercisesPage extends AppCompatActivity {
         if (equipmentList == null) equipmentList = new ArrayList<>();
         if (muscleList == null) muscleList = new ArrayList<>();
 
-
-
-
-
-        // TODO: LOGIC TO POPULATE EXERCISELIST GOES HERE
         ArrayList<Exercise> allData = ExerciseList.getAllExercises();
         ArrayList<Exercise> exerciseList = ExerciseFilter.filterExercises(allData, equipmentList, muscleList);
 
