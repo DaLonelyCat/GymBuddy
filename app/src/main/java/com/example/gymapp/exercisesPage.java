@@ -17,12 +17,15 @@ public class exercisesPage extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerviewAdapter adapter;
     private ArrayList<Exercise> exerciseList;
+    private GymDatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_exercises_page);
+
+        dbHelper = new GymDatabaseHelper(this);
 
         ArrayList<String> equipmentList = getIntent().getStringArrayListExtra("DATA_EQUIPMENT");
         ArrayList<String> muscleList = getIntent().getStringArrayListExtra("DATA_MUSCLE");
@@ -34,7 +37,7 @@ public class exercisesPage extends AppCompatActivity {
         if (equipmentList == null) equipmentList = new ArrayList<>();
         if (muscleList == null) muscleList = new ArrayList<>();
 
-        ArrayList<Exercise> allData = ExerciseList.getAllExercises();
+        ArrayList<Exercise> allData = dbHelper.getAllExercisesFromDB();
         ArrayList<Exercise> exerciseList = ExerciseFilter.filterExercises(allData, equipmentList, muscleList);
 
         System.out.println("DEBUG ALAT USER: " + equipmentList.toString());
