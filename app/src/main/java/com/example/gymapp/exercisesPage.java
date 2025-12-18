@@ -26,6 +26,7 @@ public class exercisesPage extends AppCompatActivity {
         setContentView(R.layout.activity_exercises_page);
 
         dbHelper = new GymDatabaseHelper(this);
+        dbHelper.forceResetDatabase();
 
         ArrayList<String> equipmentList = getIntent().getStringArrayListExtra("DATA_EQUIPMENT");
         ArrayList<String> muscleList = getIntent().getStringArrayListExtra("DATA_MUSCLE");
@@ -43,6 +44,8 @@ public class exercisesPage extends AppCompatActivity {
         System.out.println("DEBUG ALAT USER: " + equipmentList.toString());
         System.out.println("DEBUG OTOT USER: " + muscleList.toString());
         System.out.println("DEBUG TOTAL DATA MASTER: " + allData.size());
+        Exercise TestfirstExercise = exerciseList.get(0);
+        System.out.println("EXERCISE_NAME" + TestfirstExercise.getName());
 
         adapter = new RecyclerviewAdapter(exerciseList);
         recyclerView.setAdapter(adapter);
@@ -60,6 +63,7 @@ public class exercisesPage extends AppCompatActivity {
             Intent intent = new Intent(exercisesPage.this, startExercise.class);
 
             Exercise firstExercise = exerciseList.get(0);
+
             intent.putExtra("EXERCISE_NAME", firstExercise.getName());
             intent.putExtra("EXERCISE_IMAGE", firstExercise.getImageResId());
             intent.putExtra("EXERCISE_DESC", firstExercise.getDescription());

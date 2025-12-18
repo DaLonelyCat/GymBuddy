@@ -58,7 +58,7 @@ public class MuscleSelectionPage extends AppCompatActivity {
                 if (cb_chest.isChecked()) selectedMuscles.add("Chest");
                 if (cb_back.isChecked()) selectedMuscles.add("Back");
                 if (cb_leg.isChecked()) selectedMuscles.add("Leg");
-                if (cb_bodyweight.isChecked()) selectedMuscles.add("Body Weight");
+                if (cb_bodyweight.isChecked()) selectedMuscles.add("Core");
 
 
                 Intent i = new Intent(MuscleSelectionPage.this, exercisesPage.class);
